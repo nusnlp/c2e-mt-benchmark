@@ -8,4 +8,4 @@ Publication
 
 If you use the pre-trained models and settings from this repository, please cite the following paper:
 
-Christian Hadiwinoto and Hwee Tou Ng (2018): Upping the ante: Towards a better benchmark for Chinese-to-English machine translation. To appear in *Proceedings of the 11th edition of the Language Resources and Evaluation Conference*, Miyazaki, Japan.
+Hadiwinoto, Christian and Ng, Hwee Tou (2018). Upping the ante: Towards a better benchmark for Chinese-to-English machine translation. To appear in *Proceedings of the 11th edition of the Language Resources and Evaluation Conference*. Miyazaki, Japan.
