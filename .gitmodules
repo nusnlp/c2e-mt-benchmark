@@ -1,3 +1,6 @@
 [submodule "tools/nematus"]
 	path = tools/nematus
 	url = https://github.com/EdinburghNLP/nematus.git
+[submodule "tools/subword-nmt"]
+	path = tools/subword-nmt
+	url = https://github.com/rsennrich/subword-nmt.git
