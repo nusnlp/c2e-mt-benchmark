@@ -3,10 +3,10 @@ TOPDIR=`dirname $0`/..
 EXPSET=$1  # nist or unpc
 INPUT=$2  # name of input file, word-segmented but not subword-fragmented
 OUTPUT=$3  # name of output file
-if [ ! -z $4 ]; then
+if [[ ! -z $4 ]]; then
     DEVICES=$4
 else
-    DEVICES=cpu0
+    DEVICES=cpu
 fi
 
 TMPDIR=/tmp  # feel free to change this
@@ -14,8 +14,8 @@ TMPDIR=/tmp  # feel free to change this
 NEMATUS_DIR=${TOPDIR}/tools/nematus
 NEMATUS_DECODER=${NEMATUS_DIR}/nematus/translate.py
 RERANKER_DIR=${TOPDIR}/tools/nbest-reranker
-RERANKER=${RERANKER}/rerank.py
-AUGMENTER=${RERANKER}/augmenter.py
+RERANKER=${RERANKER_DIR}/rerank.py
+AUGMENTER=${RERANKER_DIR}/augmenter.py
 
 RERANKER_MODEL_DIR=${TOPDIR}/models/reranker/${EXPSET}
 
@@ -24,7 +24,7 @@ RERANKER_FEATSTR="LM('LM0','${LM_FILE}',normalize=True)"
 
 # Generate N-best list
 NBEST_SIZE=50
-MODELS=`ls ${TOPDIR}/models/${EXPSET}/model-*.best.npz | xargs`
+MODELS=`ls ${TOPDIR}/models/translation/${EXPSET}/model-*.best.npz | xargs`
 NBEST_TXT=${OUTPUT}.nbest
 
 bash ${TOPDIR}/scripts/subword.sh ${EXPSET} < ${INPUT} > ${INPUT}.subword

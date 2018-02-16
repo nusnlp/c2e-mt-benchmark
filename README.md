@@ -26,7 +26,6 @@ tar -xvzf pretrained.tgz
 cd ..
 ```
 
-
 Running Instructions
 --------------------
 
@@ -35,10 +34,11 @@ Running Instructions
 The input is a plain text file containing Chinese sentences, one sentence per line. The input file is passed through the following pipeline:
 
 1. Chinese word segmentation, by running `scripts/segment.sh < input > input.seg`
-2. Translation (ensure that Theano flags are set accordingly)
-   * without reranking: (to be written)
-   * with re-ranking: `scripts/translate-rerank.sh nist input.seg output`
-3. Recasing and post-processing, by running
+2. Translation (ensure that Theano flags are set as environment variables, replace `nist` with `unpc` for models trained on UN Parallel Corpus)
+   * without re-ranking: `scripts/translate-norerank.sh nist input.seg output [device(s)]`, where the device(s) include "gpu0", "gpu0 gpu1", or the default "cpu"
+   * with re-ranking: `scripts/translate-rerank.sh nist input.seg output [device(s)]`
+3. Recasing, by running `scripts/recase.sh < output > output.rc`
+4. Detokenization, by running `perl scripts/detokenizer.perl -l en < output.rc > output.detok`
 
 Publication
 -----------
