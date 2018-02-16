@@ -21,8 +21,8 @@ Finally, download and unpack the pre-trained models to the `models/` subdirector
 
 ```
 cd models/
-wget http://sterling8.d2.comp.nus.edu.sg/~christian/c2e-mt-benchmark/pretrained.tgz
-tar -xvzf pretrained.tgz
+wget http://sterling8.d2.comp.nus.edu.sg/~christian/c2e-mt-benchmark/pretrained.tar.gz
+tar -xvzf pretrained.tar.gz
 cd ..
 ```
 
