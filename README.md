@@ -4,8 +4,8 @@ Chinese-to-English Machine Translation Benchmark
 Codes and pre-trained models for the Chinese-to-English machine translation benchmark.
 
 
-Setup Instructions
-------------------
+Setup
+-----
 
 Fistly, clone this repository and the related submodules:
 
@@ -26,10 +26,8 @@ tar -xvzf pretrained.tgz
 cd ..
 ```
 
-Running Instructions
---------------------
-
-(under construction)
+Translation
+-----------
 
 The input is a plain text file containing Chinese sentences, one sentence per line. The input file is passed through the following pipeline:
 
