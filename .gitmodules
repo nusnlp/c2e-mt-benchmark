@@ -1,0 +1,3 @@
+[submodule "tools/nematus"]
+	path = tools/nematus
+	url = https://github.com/EdinburghNLP/nematus.git
