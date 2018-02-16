@@ -3,7 +3,11 @@ TOPDIR=`dirname $0`/..
 EXPSET=$1  # nist or unpc
 INPUT=$2  # name of input file, word-segmented but not subword-fragmented
 OUTPUT=$3  # name of output file
-DEVICES=$4
+if [ ! -z $4 ]; then
+    DEVICES=$4
+else
+    DEVICES=cpu0
+fi
 
 TMPDIR=/tmp  # feel free to change this
 
@@ -23,7 +27,7 @@ NBEST_SIZE=50
 MODELS=`ls ${TOPDIR}/models/${EXPSET}/model-*.best.npz | xargs`
 NBEST_TXT=${OUTPUT}.nbest
 
-bash ${TOPDIR}/scripts/subword.sh < ${INPUT} > ${INPUT}.subword
+bash ${TOPDIR}/scripts/subword.sh ${EXPSET} < ${INPUT} > ${INPUT}.subword
 python2 ${NEMATUS_DECODER} -m ${MODELS} -i ${INPUT}.subword -o ${NBEST_TXT} \
     -dl ${DEVICES} -k ${NBEST_SIZE} --n-best -n -p 4
 

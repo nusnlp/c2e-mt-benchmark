@@ -1,13 +1,13 @@
 Chinese-to-English Machine Translation Benchmark
 ================================================
 
-Codes and pre-trained models for the Chinese-to-English machine translation benchmark (under construction).
+Codes and pre-trained models for the Chinese-to-English machine translation benchmark.
 
 
-Download Instruction
---------------------
+Setup Instructions
+------------------
 
-In order to download, first clone this repository and the related submodules:
+Fistly, clone this repository and the related submodules:
 
 ```
 git clone https://github.com/nusnlp/c2e-mt-benchmark.git
@@ -15,7 +15,9 @@ cd c2e-mt-benchmark
 git submodule update --init --recursive
 ```
 
-Then, download and unpack the pre-trained models to the `models/` subdirectory:
+Secondly, go to each subdirectories under `tools/*` and follow the setup/installation instructions accordingly.
+
+Finally, download and unpack the pre-trained models to the `models/` subdirectory:
 
 ```
 cd models/
@@ -24,6 +26,19 @@ tar -xvzf pretrained.tgz
 cd ..
 ```
 
+
+Running Instructions
+--------------------
+
+(under construction)
+
+The input is a plain text file containing Chinese sentences, one sentence per line. The input file is passed through the following pipeline:
+
+1. Chinese word segmentation, by running `scripts/segment.sh < input > input.seg`
+2. Translation (ensure that Theano flags are set accordingly)
+   * without reranking: (to be written)
+   * with re-ranking: `scripts/translate-rerank.sh nist input.seg output`
+3. Recasing and post-processing, by running
 
 Publication
 -----------
