@@ -1,9 +1,10 @@
 #/bin/bash
-SCRIPTS_ROOTDIR=tools/mosesdecoder/scripts
-RECASEMODEL=models/recaser/nist/moses.ini
-RECASER_BIN=tools/mosesdecoder/bin/moses
-INFILE=$1
+BASEDIR=`dirname $0`
+
+SCRIPTS_ROOTDIR=${BASEDIR}/../tools/mosesdecoder/scripts
+RECASEMODEL=${BASEDIR}/../models/recaser/nist/moses.ini
+RECASER_BIN=${BASEDIR}/../tools/mosesdecoder/bin/moses
 
 # Rejoin sub-word fragments into word tokens then recase the output accordingly
 sed 's/\@\@ //g' | \
-$SCRIPTS_ROOTDIR/recaser/recase.perl -model ${RECASEMODEL} -in ${INFILE} -moses ${RECASER_BIN}
+${BASEDIR}/recase-stdin.perl -model ${RECASEMODEL} -moses ${RECASER_BIN}

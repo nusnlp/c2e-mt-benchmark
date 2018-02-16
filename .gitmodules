@@ -7,3 +7,6 @@
 [submodule "tools/mosesdecoder"]
 	path = tools/mosesdecoder
 	url = https://github.com/moses-smt/mosesdecoder.git
+[submodule "tools/nbest-reranker"]
+	path = tools/nbest-reranker
+	url = https://github.com/nusnlp/nbest-reranker.git
