@@ -20,21 +20,16 @@ Fourth SIGHAN Workshop on Chinese Language Processing.
 http://www.comp.nus.edu.sg/~nght/pubs/sighan05.pdf
 
 
+Requirement
+-----------
+
+* Python >= 2.6
+
 
 Running the Chinese word segmenter
 ----------------------------------
 
-A csh script cmdSeg is provided to run the segmenter:
-
-cmdSeg modelFile testinFile encoding segmentedFile dictFile
-
-where dictFile is an optional argument.
-
-eg, cmdSeg ctbModel infile gb outfile lex.GB.txt
-
-If the arugment dictFile is not provided, then only basic features are
-used for word segmentation (i.e., without making use of any external
-dictionary).
+python2 segment.py -m ctbModel -l lex.GB.txt < infile > outfile
 
 The following model file is available:
 
