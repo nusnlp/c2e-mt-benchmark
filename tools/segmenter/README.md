@@ -35,11 +35,7 @@ The following model file is available:
 
 ctbModel 
 
-They were trained on CTB training data of SIGHAN bakeoff 1, and MSR
-training data of SIGHAN bakeoff 2, respectively.  They were of version
-"V4", which means they combined the use of basic features, external
-dictionary (the downloaded PKU dictionary), and additional training
-corpora (of other segmentation standards) via example selection.  The
+They were trained on CTB training data of SIGHAN bakeoff 1. The
 encoding used is gb.
 
 
