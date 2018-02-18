@@ -26,10 +26,8 @@ tar -xvzf pretrained.tar.gz
 cd ..
 ```
 
-Comparisons between the NIST test set results achieved by our model and those achieved by prior published work is available in: http://www.comp.nus.edu.sg/~nlp/nistc2ebenchmark/
-
-Translation
------------
+Translating Text
+----------------
 
 The input is a plain text file containing Chinese sentences, one sentence per line. The input file is passed through the following pipeline:
 
@@ -39,6 +37,13 @@ The input is a plain text file containing Chinese sentences, one sentence per li
    * with re-ranking: `scripts/translate-rerank.sh nist input.seg output [device(s)]`
 3. Recasing, by running `scripts/recase.sh < output > output.rc`
 4. Detokenization, by running `perl scripts/detokenizer.perl -l en < output.rc > output.detok`
+
+
+Test Set Translation Outputs
+----------------------------
+
+The subdirectory `outputs` contains the translation outputs produced by our models. The comparisons between the NIST test set results in BLEU achieved by our model and those achieved by prior published work is available in: http://www.comp.nus.edu.sg/~nlp/nistc2ebenchmark/
+
 
 Publication
 -----------
