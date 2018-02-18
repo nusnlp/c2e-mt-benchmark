@@ -26,6 +26,8 @@ tar -xvzf pretrained.tar.gz
 cd ..
 ```
 
+Comparisons between the NIST test set results achieved by our model and those achieved by prior published work is available in: http://www.comp.nus.edu.sg/~nlp/nistc2ebenchmark/
+
 Translation
 -----------
 
