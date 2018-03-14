@@ -42,7 +42,7 @@ The input is a plain text file containing Chinese sentences, one sentence per li
 Test Set Translation Outputs
 ----------------------------
 
-The `outputs/` subdirectory contains the translation outputs produced by our models. The comparisons between the NIST test set results in BLEU achieved by our model and those achieved by prior published work are available in: http://www.comp.nus.edu.sg/~nlp/nistc2ebenchmark/
+The `outputs/` subdirectory contains the translation outputs produced by our models. The comparisons between the NIST test set results in BLEU achieved by our model and those achieved by prior published work are available [here](https://1drv.ms/x/s!AtgLdmtlqxqugTomChq7GidBY3cS).
 
 
 Publication
