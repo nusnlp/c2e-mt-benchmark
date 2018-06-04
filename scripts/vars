@@ -1,0 +1,5 @@
+SRC="zh"
+TGT="en"
+VOCAB_SIZE_S=60959
+VOCAB_SIZE_T=52963
+nematus="../tools/nematus"
